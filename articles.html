@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block body %}
+<h3>Makaleler</h3>
+<hr>
+
+{% if articles %}
+<form action="/search" method = "post">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
+        <form class="card card-sm">
+            <div class="card-body row no-gutters align-items-center">
+                <div class="col-auto">
+                    <i class="fas fa-search h4 text-body"></i>
+                </div>
+                <div class="col">
+                    <input class="form-control form-control-lg form-control-borderless" name= "keyword" type="search" placeholder="Ara...">
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-lg btn-dark" type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>  
+</div>
+      
+</form>
+<hr>
+
+
+<ul class="list-group">
+    {% for article in articles  %}
+  <li class="list-group-item "><a href="article/{{article.id}}">{{article.title}} </a></li>
+  
+</ul>
+    {% endfor %}
+  
+{% else %}
+<div class = "alert alert-danger">Bu Blogta Henüz Makale Bulunmamaktadır</div>
+{% endif %}
+
+{% endblock body %}

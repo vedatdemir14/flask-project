@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class = "jumbotron text-center">
+    <h3>
+        AGA NAPIYON BURDA AGAAA
+    </h3>
+
+    <p>now friends listen to me well. i am dj ercik. but look some people are using my videos. really a wrong behavior. no one can use anyone's videos. this is a virtual world. a site called youtube. please know your place. if you dont i fuck your mother. ok? i fuck your mother your past and your future. you sons of bitches' bastards ha. you fucking you are 3 cent men ha. sons of bithces who dont know how to type comment ha. fuck all of yours mothers ha. fuck all of yours women. fuck all of yours sister. you fucking sons. fuck all of yours mothers who are opposing me ha. who doesnt want me fuck their mothers, fuck their lineage ha. you fucking sons of bitches. who the fuck do you thinnknknknk you are ha? you fucking sons of bitches ha. this is ERCIK before you ERCIK. is there anyone else ha? you sons of bitches. one day everybody will see my power.   
+    </p>
+    <hr>
+    <hr>
+    <div class="jumbotron text-center">
+  <h1 class="display-4">Merhaba!</h1>
+  <p class="lead">Tasarladığım Websiteme Hoşgeldin.</p>
+  
+  </p>
+</div>
+
+</div>
+<ul>
+    {% for article in articles %}
+    <li>Article Id:{{article.id}} - Title: {{article.title}} - content: {{article.content}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock body %}
